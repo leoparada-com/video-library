@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <title>Video Card</title>
+<style>
+img {width:100%;}
+.card {border: solid 0px red; width:25%; float:left; margin:10px;
+  -webkit-box-shadow: 1px 7px 24px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 7px 24px -1px rgba(0,0,0,0.75);
+box-shadow: 1px 7px 24px -1px rgba(0,0,0,0.75);
+}
+body {font-family: arial}
+
+.card-info {padding:0px 10px;}
+
+</style>
+
+</head>
+<body>
+  {% for video in videos %}
+    <div class="card">
+      <a href="{{ video['url_video'] }}"><img src="{{ video['miniatura_video'] }}" alt="miniatura"></a>
+      <div class="card-info">
+        <h3>{{ video['titulo_video'] }}</h3>
+        <!--<p>{{ video['descripcion_video'] }}</p>-->
+        <!--<a href="{{ video['url_video'] }}">Ver video</a>-->
+      </div>
+    </div>
+  {% endfor %}
+</body>
+</html>
